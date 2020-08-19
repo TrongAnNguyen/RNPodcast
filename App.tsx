@@ -1,15 +1,13 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import {ThemeProvider} from '@shopify/restyle';
-import theme, {Box, Text} from './src/constants/theme';
-
-declare const global: {HermesInternal: null | {}};
+import theme from './src/constants/theme';
+import MainNavigation from './src/navigations/MainNavigation';
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Box flex={1} backgroundColor="cardPrimaryBackground">
-        <Text>Hello</Text>
-      </Box>
+      <MainNavigation />
     </ThemeProvider>
   );
 };
